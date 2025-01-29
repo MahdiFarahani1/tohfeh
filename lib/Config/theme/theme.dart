@@ -69,9 +69,9 @@ class ThemeApp {
     fontFamily: GoogleFonts.amiri().fontFamily,
     brightness: Brightness.dark,
     primaryColor: primaryColor,
-    scaffoldBackgroundColor: Colors.grey[850],
+    scaffoldBackgroundColor: const Color.fromARGB(255, 33, 36, 40),
     appBarTheme: const AppBarTheme(
-      backgroundColor: primaryColor,
+      backgroundColor: Color.fromARGB(255, 24, 26, 28),
       iconTheme: IconThemeData(color: Colors.white),
       titleTextStyle: TextStyle(
         color: Colors.white,
@@ -80,7 +80,7 @@ class ThemeApp {
       ),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: primaryColor,
+      backgroundColor: Color.fromARGB(255, 24, 26, 28),
       foregroundColor: Colors.white,
     ),
     buttonTheme: const ButtonThemeData(
@@ -123,7 +123,7 @@ class ThemeApp {
     ).copyWith(
       primary: primaryColor,
       secondary: secondaryColor,
-      surface: Colors.orange[800], // رنگ سطح: نارنجی تیره
+      surface: Colors.orange[800],
       brightness: Brightness.dark,
     ),
   );

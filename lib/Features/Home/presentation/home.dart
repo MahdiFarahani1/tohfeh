@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_application_1/Core/extensions/widget_ex.dart';
 import 'package:flutter_application_1/Core/utils/esay_size.dart';
 import 'package:flutter_application_1/Features/Home/presentation/bloc/search/search_title_cubit.dart';
+import 'package:flutter_application_1/Features/Settings/presentation/bloc/cubit/settings_cubit.dart';
 import 'package:flutter_application_1/Features/Tafsuir/presentation/tafsir.dart';
 import 'package:flutter_application_1/gen/assets.gen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
-class Home extends StatelessWidget {
-  final TextEditingController _textController = TextEditingController();
+class Home extends StatefulWidget {
+  const Home({super.key});
 
-  Home({super.key});
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  final TextEditingController _textController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Color.fromARGB(255, 22, 176, 182),
-      ),
-    );
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -28,7 +28,9 @@ class Home extends StatelessWidget {
               width: EsaySize.width(context),
               height: EsaySize.height(context) / 5,
               decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.primary,
+                  color: BlocProvider.of<SettingsCubit>(context).state.isDark
+                      ? const Color.fromARGB(255, 24, 26, 28)
+                      : Theme.of(context).colorScheme.primary,
                   borderRadius: const BorderRadius.only(
                       bottomRight: Radius.circular(16),
                       bottomLeft: Radius.circular(16))),

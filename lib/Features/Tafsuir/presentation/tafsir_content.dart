@@ -9,7 +9,8 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 class TafsirContent extends StatelessWidget {
   final int id;
-  const TafsirContent({super.key, required this.id});
+  final String title;
+  const TafsirContent({super.key, required this.id, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +18,16 @@ class TafsirContent extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          title: Text(
+            title,
+            style: const TextStyle(fontSize: 21.5, fontWeight: FontWeight.bold),
+          ),
           bottom: const TabBar(
             labelColor: Colors.white,
             tabs: [
-              Tab(text: 'تفسیر'),
-              Tab(text: 'روایات'),
-              Tab(text: 'قصص'),
+              Tab(text: 'التفسیر'),
+              Tab(text: 'الروایات'),
+              Tab(text: 'القصص'),
             ],
           ),
         ),
@@ -65,13 +70,13 @@ class TafsirContent extends StatelessWidget {
           String head = '';
           switch (text) {
             case 'Interpretation':
-              head = 'تفسیر';
+              head = 'التفسیر';
               break;
             case 'narrations':
-              head = 'روایات';
+              head = 'الروایات';
               break;
             case 'stories':
-              head = 'قصص';
+              head = 'القصص';
               break;
             default:
           }
@@ -89,7 +94,7 @@ class TafsirContent extends StatelessWidget {
                               ${replaceVerseNumbers(snapshot.data![0]['verse'])}
                                                       </div>
                                                       ''',
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                               color: Colors.green,
                             ),
                           ),

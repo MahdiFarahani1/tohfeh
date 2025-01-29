@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_application_1/Core/common/common_diolog.dart';
 import 'package:flutter_application_1/Core/database/db_helper.dart';
 import 'package:flutter_application_1/Core/utils/esay_size.dart';
@@ -15,11 +16,6 @@ class FavoritePage extends StatefulWidget {
 class _FavoritePageState extends State<FavoritePage> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Color.fromARGB(255, 22, 176, 182),
-      ),
-    );
     return FutureBuilder(
       future: DBhelper().getFavorite(),
       builder: (context, snapshot) {
@@ -36,6 +32,32 @@ class _FavoritePageState extends State<FavoritePage> {
             ),
           );
         } else if (snapshot.hasData) {
+          if (snapshot.data!.isEmpty) {
+            return Center(
+              child: IntrinsicHeight(
+                child: Container(
+                  alignment: Alignment.center,
+                  width: EsaySize.width(context) / 1.5,
+                  decoration: BoxDecoration(
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withAlpha((0.1 * 255).toInt()),
+                      borderRadius: BorderRadius.circular(4)),
+                  child: const Padding(
+                    padding: EdgeInsets.all(18.0),
+                    child: Text(
+                      'لم يتم اضافة اي شئ بعد',
+                      style: TextStyle(fontSize: 17),
+                    ),
+                  ),
+                )
+                    .animate()
+                    .moveY(delay: const Duration(milliseconds: 300), begin: 40)
+                    .fade(),
+              ),
+            );
+          }
           return ListView.builder(
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {

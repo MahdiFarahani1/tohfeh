@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Features/Home/presentation/bloc/navbar/bottom_navba_cubit.dart';
+import 'package:flutter_application_1/Features/Settings/presentation/bloc/cubit/settings_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -21,7 +22,10 @@ class MainWrapper extends StatelessWidget {
                   navBarCubit.changeNavBar(value);
                 },
                 selectedIndex: state.selectedIndex,
-                backgroundColor: Theme.of(context).colorScheme.primary,
+                backgroundColor:
+                    BlocProvider.of<SettingsCubit>(context).state.isDark
+                        ? const Color.fromARGB(255, 24, 26, 28)
+                        : Theme.of(context).colorScheme.primary,
                 color: Colors.white,
                 padding: const EdgeInsets.all(20),
                 activeColor: Theme.of(context).colorScheme.secondary,

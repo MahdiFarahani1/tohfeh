@@ -127,7 +127,7 @@ class SettingsPage extends StatelessWidget {
               () {
             Clipboard.setData(
                 const ClipboardData(text: 'noralanor6236@gmail.com'));
-            CustomSnackBar.show(context, message: 'ایمیل کپی شد!');
+            CustomSnackBar.show(context, message: 'تم نسخ الإيميل بنجاح');
           }),
           _buildNavigationTile(
               context, 'مصادر التفسير الموضوعي', Icons.menu_book, () {

@@ -96,6 +96,7 @@ class _TafsirState extends State<Tafsir> {
               MaterialPageRoute(
                 builder: (context) => TafsirContent(
                   id: snapshot.data![index]['id'],
+                  title: snapshot.data![index]['title'],
                 ),
               ),
             );
