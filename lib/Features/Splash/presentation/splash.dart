@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Core/utils/esay_size.dart';
+import 'package:flutter_application_1/Features/Home/presentation/main_wrapper.dart';
+import 'package:flutter_application_1/Features/Settings/presentation/bloc/cubit/settings_cubit.dart';
+import 'package:flutter_application_1/gen/assets.gen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class Splash extends StatefulWidget {
+  const Splash({super.key});
+
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 2), () {
+      BlocProvider.of<SettingsCubit>(context).initSetting();
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const MainWrapper(),
+          ));
+    });
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: SizedBox(
+            width: EsaySize.width(context),
+            height: EsaySize.height(context),
+            child: Assets.images.splash.image(fit: BoxFit.cover)),
+      ),
+    );
+  }
+}
