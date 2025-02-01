@@ -12,4 +12,10 @@ class FontFamily {
 
   /// Font family: abo
   static const String abo = 'abo';
+
+  /// Font family: al
+  static const String al = 'al';
+
+  /// Font family: alapp
+  static const String alapp = 'alapp';
 }

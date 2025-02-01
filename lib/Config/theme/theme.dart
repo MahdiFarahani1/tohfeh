@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_application_1/gen/fonts.gen.dart';
 
 class ThemeApp {
   static const Color primaryColor = Color.fromARGB(255, 22, 176, 182);
   static Color secondaryColor = const Color.fromARGB(255, 250, 178, 69);
 
   static ThemeData lightTheme = ThemeData(
-    fontFamily: GoogleFonts.amiri().fontFamily,
+    fontFamily: FontFamily.alapp,
     brightness: Brightness.light,
     primaryColor: primaryColor,
     scaffoldBackgroundColor: Colors.white,
@@ -66,7 +66,7 @@ class ThemeApp {
   );
 
   static ThemeData darkTheme = ThemeData(
-    fontFamily: GoogleFonts.amiri().fontFamily,
+    fontFamily: FontFamily.alapp,
     brightness: Brightness.dark,
     primaryColor: primaryColor,
     scaffoldBackgroundColor: const Color.fromARGB(255, 33, 36, 40),

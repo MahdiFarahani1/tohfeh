@@ -22,6 +22,14 @@ class $AssetsDatabaseGen {
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
+  /// File path: assets/fonts/Al-Jazeera-Arabic-Regular.ttf
+  String get alJazeeraArabicRegularTtf =>
+      'assets/fonts/Al-Jazeera-Arabic-Regular.ttf';
+
+  /// File path: assets/fonts/Al-Jazeera-Arabic-Regular.woff2
+  String get alJazeeraArabicRegularWoff2 =>
+      'assets/fonts/Al-Jazeera-Arabic-Regular.woff2';
+
   /// File path: assets/fonts/Arabic%20Typesetting.ttf
   String get arabic20Typesetting => 'assets/fonts/Arabic%20Typesetting.ttf';
 
@@ -46,6 +54,8 @@ class $AssetsFontsGen {
 
   /// List of all assets
   List<String> get values => [
+        alJazeeraArabicRegularTtf,
+        alJazeeraArabicRegularWoff2,
         arabic20Typesetting,
         badrQuranRegular201,
         hafs18,

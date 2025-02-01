@@ -29,6 +29,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 22, 176, 182),
       body: SafeArea(
         child: SizedBox(
             width: EsaySize.width(context),
