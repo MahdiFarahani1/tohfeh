@@ -38,19 +38,19 @@ class MainWrapper extends StatelessWidget {
                 tabs: const [
                   GButton(
                     icon: Icons.home,
-                    text: 'خانه',
+                    text: 'الرئيسية',
                   ),
                   GButton(
                     icon: Icons.star,
-                    text: 'ذخیره',
+                    text: 'المفضلة',
                   ),
                   GButton(
                     icon: Icons.info,
-                    text: 'درباره ما',
+                    text: 'حول التطبيق',
                   ),
                   GButton(
                     icon: Icons.settings,
-                    text: 'تنظیمات',
+                    text: 'الاعدادات',
                   )
                 ]),
           ),

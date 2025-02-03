@@ -4,7 +4,7 @@
     <application  
         android:usesCleartextTraffic="true"
         android:hardwareAccelerated="true"
-        android:label="flutter_application_1"
+        android:label="التفسير الموضوعي"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

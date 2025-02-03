@@ -12,11 +12,11 @@ class InfoPage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          leadingWidth: 100,
+          leadingWidth: 180,
           leading: const Padding(
             padding: EdgeInsets.only(right: 12, top: 16),
             child: Text(
-              'التطبیق',
+              'حول التطبيق',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,

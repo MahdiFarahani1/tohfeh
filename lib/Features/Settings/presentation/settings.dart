@@ -121,7 +121,9 @@ class SettingsPage extends StatelessWidget {
           }),
           divider(context),
           _buildSectionTitle('حول التطبيق'),
-          _buildInfoTile(context, 'عن التطبيق', Icons.info),
+          _buildNavigationTile(context, 'عن التطبيق', Icons.info, () {
+            showCustomBottomSheet(context, 'test 1 test 1 test 1');
+          }),
           _buildClickableTile(
               context, 'تواصل معنا', Icons.email, 'noralanor6236@gmail.com',
               () {
@@ -131,7 +133,7 @@ class SettingsPage extends StatelessWidget {
           }),
           _buildNavigationTile(
               context, 'مصادر التفسير الموضوعي', Icons.menu_book, () {
-            showCustomBottomSheet(context, 'sadsadsad');
+            showCustomBottomSheet(context, 'test 1 test 1 test 1');
           }),
           _buildInfoTile(context, 'إصدار', Icons.verified, subtitle: '(1.0.0)'),
           divider(context),
