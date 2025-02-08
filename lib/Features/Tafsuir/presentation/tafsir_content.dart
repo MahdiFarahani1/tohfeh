@@ -84,6 +84,7 @@ class _TafsirContentState extends State<TafsirContent> {
           ),
         ),
         body: TabBarView(
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             futureText('Interpretation', true),
             futureText('narrations', false),
