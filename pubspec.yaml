@@ -16,7 +16,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 2.0.0+8
 
 environment:
   sdk: ^3.5.3
@@ -65,6 +65,9 @@ dependencies:
   google_nav_bar: ^5.0.7
 
   flutter_inappwebview: ^6.1.5
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.5.2
+  audioplayers: ^6.4.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -89,6 +92,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/database/kingWork.db
+    - assets/database/1.db
+    - assets/database/quran.db
     - assets/images/
     - assets/fonts/
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -113,6 +118,39 @@ flutter:
     - family: alapp
       fonts:
         - asset: assets/fonts/Al-Jazeera-Arabic-Regular.ttf
+
+    - family: amiri
+      fonts:
+        - asset: assets/fonts/AmiriQuran-Regular.ttf
+
+    - family: noto
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic-VariableFont_wght.ttf
+
+    - family: scheh
+      fonts:
+        - asset: assets/fonts/ScheherazadeNew-Bold.ttf
+
+    - family: Nabi
+      fonts:
+        - asset: assets/fonts/Nabi.ttf
+
+    - family: Neirizi
+      fonts:
+        - asset: assets/fonts/Neirizi.ttf
+
+    - family: MyriadArabic-Bold
+      fonts:
+        - asset: assets/fonts/MyriadArabic-Bold.otf
+
+    - family: BADRB
+      fonts:
+        - asset: assets/fonts/BADRB_DARB.TTF
+
+    - family: YakoutLinotypeLight-Regular
+      fonts:
+        - asset: assets/fonts/YakoutLinotypeLight-Regular.ttf
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

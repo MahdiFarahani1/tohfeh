@@ -46,9 +46,9 @@ class MyApp extends StatelessWidget {
               GlobalWidgetsLocalizations.delegate,
             ],
             supportedLocales: const [
-              Locale("fa", "IR"),
+              Locale("ar", "IQ"),
             ],
-            locale: const Locale("fa", "IR"),
+            locale: const Locale("ar", "IQ"),
             theme: state.themeData,
             home: const Splash(),
           );

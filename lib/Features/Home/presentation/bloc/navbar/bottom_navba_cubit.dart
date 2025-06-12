@@ -4,13 +4,15 @@ import 'package:flutter_application_1/Features/Favorite/presentation/favorite.da
 import 'package:flutter_application_1/Features/Home/presentation/home.dart';
 import 'package:flutter_application_1/Features/Info/presentation/info.dart';
 import 'package:flutter_application_1/Features/Settings/presentation/settings.dart';
+import 'package:flutter_application_1/quran/presentation/quranpage.dart';
 
 part 'bottom_navba_state.dart';
 
 class BottomNavbarCubit extends Cubit<BottomNavbarState> {
   BottomNavbarCubit() : super(BottomNavbarState(selectedIndex: 0));
   List<Widget> listPages = [
-    Home(),
+    const Home(),
+    Quranpage(),
     const FavoritePage(),
     InfoPage(),
     const SettingsPage(),

@@ -1,0 +1,36 @@
+import 'package:flutter_application_1/quran/model/model.dart';
+
+List<Quran> quran = [];
+List<Soraa> soraa = [];
+List<Joze> jozes = [
+  Joze(id: 1, joze: 'الجزء 1', stPage: 1),
+  Joze(id: 2, joze: 'الجزء 2', stPage: 22),
+  Joze(id: 3, joze: 'الجزء 3', stPage: 42),
+  Joze(id: 4, joze: 'الجزء 4', stPage: 62),
+  Joze(id: 5, joze: 'الجزء 5', stPage: 82),
+  Joze(id: 6, joze: 'الجزء 6', stPage: 102),
+  Joze(id: 7, joze: 'الجزء 7', stPage: 122),
+  Joze(id: 8, joze: 'الجزء 8', stPage: 142),
+  Joze(id: 9, joze: 'الجزء 9', stPage: 162),
+  Joze(id: 10, joze: 'الجزء 10', stPage: 182),
+  Joze(id: 11, joze: 'الجزء 11', stPage: 202),
+  Joze(id: 12, joze: 'الجزء 12', stPage: 222),
+  Joze(id: 13, joze: 'الجزء 13', stPage: 242),
+  Joze(id: 14, joze: 'الجزء 14', stPage: 262),
+  Joze(id: 15, joze: 'الجزء 15', stPage: 282),
+  Joze(id: 16, joze: 'الجزء 16', stPage: 302),
+  Joze(id: 17, joze: 'الجزء 17', stPage: 322),
+  Joze(id: 18, joze: 'الجزء 18', stPage: 342),
+  Joze(id: 19, joze: 'الجزء 19', stPage: 362),
+  Joze(id: 20, joze: 'الجزء 20', stPage: 382),
+  Joze(id: 21, joze: 'الجزء 21', stPage: 402),
+  Joze(id: 22, joze: 'الجزء 22', stPage: 422),
+  Joze(id: 23, joze: 'الجزء 23', stPage: 442),
+  Joze(id: 24, joze: 'الجزء 24', stPage: 462),
+  Joze(id: 25, joze: 'الجزء 25', stPage: 482),
+  Joze(id: 26, joze: 'الجزء 26', stPage: 502),
+  Joze(id: 27, joze: 'الجزء 27', stPage: 522),
+  Joze(id: 28, joze: 'الجزء 28', stPage: 542),
+  Joze(id: 29, joze: 'الجزء 29', stPage: 562),
+  Joze(id: 30, joze: 'الجزء 30', stPage: 582),
+];

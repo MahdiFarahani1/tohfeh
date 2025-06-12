@@ -62,9 +62,9 @@ class DBhelper {
       '''
     SELECT * 
     FROM topics 
-    WHERE title LIKE ? 
+    WHERE title LIKE ? OR Interpretation LIKE ? OR narrations LIKE ? OR stories LIKE ?
       ''',
-      ['%$keyword%'],
+      ['%$keyword%', '%$keyword%', '%$keyword%', '%$keyword%'],
     );
   }
 

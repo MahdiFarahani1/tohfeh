@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Core/database/getdata.dart';
 import 'package:flutter_application_1/Core/utils/esay_size.dart';
 import 'package:flutter_application_1/Features/Home/presentation/main_wrapper.dart';
 import 'package:flutter_application_1/Features/Settings/presentation/bloc/cubit/settings_cubit.dart';
@@ -13,6 +14,7 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  MainData mainData = MainData();
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 2), () {
@@ -22,6 +24,11 @@ class _SplashState extends State<Splash> {
           MaterialPageRoute(
             builder: (context) => const MainWrapper(),
           ));
+    });
+    mainData.initData();
+    Future.delayed(const Duration(milliseconds: 500), () {
+      mainData.getQuran();
+      mainData.getSoraa();
     });
     super.initState();
   }

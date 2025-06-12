@@ -1,6 +1,8 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Features/Home/presentation/bloc/navbar/bottom_navba_cubit.dart';
 import 'package:flutter_application_1/Features/Settings/presentation/bloc/cubit/settings_cubit.dart';
+import 'package:flutter_application_1/quran/presentation/quranpage.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -19,6 +21,14 @@ class MainWrapper extends StatelessWidget {
                 topEnd: Radius.circular(16), topStart: Radius.circular(16)),
             child: GNav(
                 onTabChange: (value) {
+                  if (state.selectedIndex == 1) {
+                    AudioPlayer().pause();
+                    AudioPlayer().dispose();
+                    final quranPageState =
+                        navBarCubit.listPages[1] as Quranpage;
+                    quranPageState.pauseplayer(); // Call the function
+                    quranPageState.savePageNumber();
+                  }
                   navBarCubit.changeNavBar(value);
                 },
                 selectedIndex: state.selectedIndex,
@@ -39,6 +49,10 @@ class MainWrapper extends StatelessWidget {
                   GButton(
                     icon: Icons.home,
                     text: 'الرئيسية',
+                  ),
+                  GButton(
+                    icon: Icons.menu_book,
+                    text: 'القرآن الكريم',
                   ),
                   GButton(
                     icon: Icons.star,

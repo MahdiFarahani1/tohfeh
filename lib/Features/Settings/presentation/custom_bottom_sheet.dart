@@ -8,6 +8,7 @@ void showCustomBottomSheet(BuildContext context, String message) {
     isScrollControlled: true,
     builder: (context) {
       return Container(
+        height: EsaySize.height(context) - 50,
         width: EsaySize.width(context),
         decoration: const BoxDecoration(
           color: Colors.white,
@@ -34,14 +35,21 @@ void showCustomBottomSheet(BuildContext context, String message) {
               ),
             ),
             EsaySize.gap(10),
-            Text(
-              message,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-                color: Colors.black87,
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Text(
+                    message,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black87,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ),
-              textAlign: TextAlign.center,
             ),
             EsaySize.gap(15),
             ElevatedButton(
@@ -55,7 +63,7 @@ void showCustomBottomSheet(BuildContext context, String message) {
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
               ),
               child: const Text(
-                "بستن",
+                "اغلاق",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
